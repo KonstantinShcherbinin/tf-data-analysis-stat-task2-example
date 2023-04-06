@@ -11,11 +11,12 @@ def solution(p: float, x: np.array) -> tuple:
     # Это будет вашим решением
     # Не меняйте название функции и её аргументы
     alpha = 1 - p
+    #beta = 
     loc = x.mean()
     var = sum([(i - loc) ** 2 for i in x])
-    scale = np.sqrt(var / (len(x) - 1))
-    return 2 * loc - 2 * (scale * norm.ppf(alpha / 2) / np.sqrt(len(x))), \
-           2 * loc - 2 * (scale * norm.ppf(alpha / 2) / np.sqrt(len(x)))
+    scale = np.sqrt(var / (len(x)))
+    return 2 * loc - 2 * (scale * norm.ppf(1 - alpha / 2) / np.sqrt(len(x))), \
+           2 * loc + 2 * (scale * norm.ppf(1 - alpha / 2) / np.sqrt(len(x)))
 
 
 #if __name__ == '__main__':

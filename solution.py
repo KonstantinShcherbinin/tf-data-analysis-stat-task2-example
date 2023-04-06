@@ -23,6 +23,6 @@ def solution(p: float, x: np.array) -> tuple:
     #return norm.ppf(1 - alpha/2)
     #return loc
 
-if __name__ == '__main__':
-    m = np.array([0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 0.96, 0.97, 0.98, 0.99])
-    print(solution(0.99, m))
+#if __name__ == '__main__':
+#    m = np.array([0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 0.96, 0.97, 0.98, 0.99])
+#    print(solution(0.99, m))
